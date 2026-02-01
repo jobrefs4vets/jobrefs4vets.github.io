@@ -1,0 +1,122 @@
+---
+
+title: "Senior Backend Engineer"
+
+description: "Design and build distributed backend systems."
+
+datePosted: "2026-01-31"
+
+validThrough: "2026-03-15"
+
+employmentType: "FULL\_TIME"
+
+
+
+hiringOrganization:
+
+&nbsp; name: "ExampleCorp"
+
+&nbsp; website: "https://example.com"
+
+&nbsp; logo: "https://example.com/logo.png"
+
+
+
+jobLocation:
+
+&nbsp; - street: "123 Main St"
+
+&nbsp;   city: "Oceanside"
+
+&nbsp;   region: "CA"
+
+&nbsp;   postalCode: "92054"
+
+&nbsp;   country: "USA"
+
+&nbsp; - street: "500 Market St"
+
+&nbsp;   city: "San Francisco"
+
+&nbsp;   region: "CA"
+
+&nbsp;   postalCode: "94105"
+
+&nbsp;   country: "USA"
+
+
+
+jobLocationType: "TELECOMMUTE"
+
+
+
+applicantLocationRequirements: "USA"
+
+
+
+directApply: true
+
+applicationUrl: "https://example.com/careers/backend-engineer/apply"
+
+
+
+baseSalary:
+
+&nbsp; currency: "USD"
+
+&nbsp; value: 150000
+
+&nbsp; minValue: 140000
+
+&nbsp; maxValue: 170000
+
+&nbsp; unitText: "YEAR"
+
+
+
+jobStartDate: "2026-04-01"
+
+industry: "Software"
+
+occupationalCategory: "15-1252.00"
+
+qualifications: "5+ years backend experience."
+
+responsibilities: "Build APIs, maintain services."
+
+experienceRequirements: "Experience with distributed systems."
+
+educationRequirements: "BS in Computer Science or equivalent."
+
+skills: "Go, Python, Kubernetes"
+
+incentiveCompensation: "Annual bonus"
+
+jobBenefits: "Health, dental, 401k"
+
+workHours: "40 hours per week"
+
+physicalRequirement: "None"
+
+securityClearanceRequirement: "None"
+
+
+
+identifier:
+
+&nbsp; name: "ExampleCorp"
+
+&nbsp; value: "SBE-2026"
+
+
+
+postingId: "SBE-2026"
+
+url: "https://example.com/careers/backend-engineer"
+
+---
+
+
+
+Full job description in Markdown goes here.
+
