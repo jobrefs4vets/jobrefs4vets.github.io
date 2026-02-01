@@ -1,0 +1,52 @@
+---
+layout: default
+---
+
+{% assign today = site.time | date: "%Y-%m-%d" %}
+
+{% if page.validThrough < today %}
+<p>This job posting has expired.</p>
+{% else %}
+
+<h1>{{ page.title }}</h1>
+<p>{{ page.description }}</p>
+
+{{ content }}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "title": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  "datePosted": "{{ page.datePosted }}",
+  "validThrough": "{{ page.validThrough }}",
+  "employmentType": "{{ page.employmentType }}",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "{{ page.hiringOrganization.name }}",
+    "sameAs": "{{ page.hiringOrganization.website }}"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ page.jobLocation.street }}",
+      "addressLocality": "{{ page.jobLocation.city }}",
+      "addressRegion": "{{ page.jobLocation.region }}",
+      "postalCode": "{{ page.jobLocation.postalCode }}",
+      "addressCountry": "{{ page.jobLocation.country }}"
+    }
+  },
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "{{ page.baseSalary.currency }}",
+    "value": {
+      "@type": "QuantitativeValue",
+      "value": {{ page.baseSalary.value }}
+    }
+  }
+}
+</script>
+
+{% endif %}
