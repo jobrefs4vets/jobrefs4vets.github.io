@@ -8,4 +8,4 @@ permalink: /apply/
 
 For now, please email your resume and any relevant information to:
 
-**shane@oxenith.com**
+**shane_at_oxenith.com**
