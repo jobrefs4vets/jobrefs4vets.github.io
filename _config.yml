@@ -1,6 +1,6 @@
-title: Minimalist Job Board
-email: jobs@example.com
-description: A clean, grey-outline job board built with Jekyll and Google JobPosting schema.
+title: JobRefs4Vets
+email: support@jobrefs4vets.com
+description: Job opportunities for veterans and military-affiliated professionals.
 baseurl: ""
 url: "https://jobrefs4vets.github.io"
 markdown: kramdown

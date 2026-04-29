@@ -123,7 +123,7 @@ a {
   font-size: .95rem;
 }
 
-small-label {
+.small-label {
   font-size: .85rem;
 }
 
@@ -150,12 +150,12 @@ small-label {
 .job-detail {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
-  gap: 2rem;
+  gap: 1.5rem;
   align-items: start;
 }
 
 .job-header {
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .job-header .small-label {
@@ -169,7 +169,7 @@ small-label {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 2rem;
+  padding: 1.5rem;
 }
 
 .job-body h2 {
