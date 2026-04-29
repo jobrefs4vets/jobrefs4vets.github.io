@@ -1,117 +1,28 @@
 ---
 layout: default
+title: "{{ page.title }}"
 ---
+<article class="job-detail">
+  <header class="job-header">
+    <p class="small-label">{{ page.employment_type }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="company">{{ page.hiring_organization_name }}</p>
+    <p class="location">{{ page.job_location_address_locality }}, {{ page.job_location_address_region }}</p>
+  </header>
 
-{% assign today = site.time | date: "%Y-%m-%d" %}
-{% if page.validThrough < today %}
-<p>This job posting has expired.</p>
-{% else %}
+  <section class="job-body">
+    {{ content }}
+  </section>
 
-<h1>{{ page.title }}</h1>
-<p>{{ page.description }}</p>
+  <aside class="job-sidebar">
+    <div class="job-box">
+      <h2>Apply</h2>
+      <p><strong>Salary</strong><br>{{ page.base_salary_currency }} {{ page.base_salary_value }} / {{ page.base_salary_unit_text }}</p>
+      <p><strong>Employment</strong><br>{{ page.employment_type }}</p>
+      <p><strong>Location</strong><br>{{ page.job_location_address_locality }}, {{ page.job_location_address_region }}</p>
+      <a class="button" href="{{ page.apply_url }}">Apply Now</a>
+    </div>
+  </aside>
 
-{% if page.applicationUrl %}
-  <p><a href="{{ page.applicationUrl }}" class="apply-button">Apply Now</a></p>
-{% else %}
-  <p><a href="/apply/" class="apply-button">Apply Now</a></p>
-{% endif %}
-
-{{ content }}
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org/",
-  "@type": "JobPosting",
-
-  "title": "{{ page.title | escape }}",
-  "description": "{{ page.description | escape }}",
-  "datePosted": "{{ page.datePosted }}",
-  "validThrough": "{{ page.validThrough }}",
-  "employmentType": "{{ page.employmentType }}",
-
-  "hiringOrganization": {
-    "@type": "Organization",
-    "name": "{{ page.hiringOrganization.name }}",
-    "sameAs": "{{ page.hiringOrganization.website }}"{% if page.hiringOrganization.logo %},
-    "logo": "{{ page.hiringOrganization.logo }}"{% endif %}
-  },
-
-  {% if page.jobLocation %}
-  "jobLocation": [
-    {% for loc in page.jobLocation %}
-    {
-      "@type": "Place",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "{{ loc.street }}",
-        "addressLocality": "{{ loc.city }}",
-        "addressRegion": "{{ loc.region }}",
-        "postalCode": "{{ loc.postalCode }}",
-        "addressCountry": "{{ loc.country }}"
-      }
-    }{% if forloop.last == false %},{% endif %}
-    {% endfor %}
-  ],
-  {% endif %}
-
-  {% if page.jobLocationType %}
-  "jobLocationType": "{{ page.jobLocationType }}",
-  {% endif %}
-
-  {% if page.applicantLocationRequirements %}
-  "applicantLocationRequirements": {
-    "@type": "Country",
-    "name": "{{ page.applicantLocationRequirements }}"
-  },
-  {% endif %}
-
-  {% if page.directApply %}
-  "directApply": {{ page.directApply }},
-  {% endif %}
-
-  {% if page.applicationUrl %}
-  "applicationUrl": "{{ page.applicationUrl }}",
-  {% endif %}
-
-  {% if page.baseSalary %}
-  "baseSalary": {
-    "@type": "MonetaryAmount",
-    "currency": "{{ page.baseSalary.currency }}",
-    "value": {
-      "@type": "QuantitativeValue",
-      "value": {{ page.baseSalary.value }}{% if page.baseSalary.minValue %},
-      "minValue": {{ page.baseSalary.minValue }}{% endif %}{% if page.baseSalary.maxValue %},
-      "maxValue": {{ page.baseSalary.maxValue }}{% endif %}{% if page.baseSalary.unitText %},
-      "unitText": "{{ page.baseSalary.unitText }}"{% endif %}
-    }
-  },
-  {% endif %}
-
-  {% if page.jobStartDate %}"jobStartDate": "{{ page.jobStartDate }}",{% endif %}
-  {% if page.industry %}"industry": "{{ page.industry }}",{% endif %}
-  {% if page.occupationalCategory %}"occupationalCategory": "{{ page.occupationalCategory }}",{% endif %}
-  {% if page.qualifications %}"qualifications": "{{ page.qualifications | escape }}",{% endif %}
-  {% if page.responsibilities %}"responsibilities": "{{ page.responsibilities | escape }}",{% endif %}
-  {% if page.experienceRequirements %}"experienceRequirements": "{{ page.experienceRequirements | escape }}",{% endif %}
-  {% if page.educationRequirements %}"educationRequirements": "{{ page.educationRequirements | escape }}",{% endif %}
-  {% if page.skills %}"skills": "{{ page.skills | escape }}",{% endif %}
-  {% if page.incentiveCompensation %}"incentiveCompensation": "{{ page.incentiveCompensation | escape }}",{% endif %}
-  {% if page.jobBenefits %}"jobBenefits": "{{ page.jobBenefits | escape }}",{% endif %}
-  {% if page.workHours %}"workHours": "{{ page.workHours | escape }}",{% endif %}
-  {% if page.physicalRequirement %}"physicalRequirement": "{{ page.physicalRequirement | escape }}",{% endif %}
-  {% if page.securityClearanceRequirement %}"securityClearanceRequirement": "{{ page.securityClearanceRequirement | escape }}",{% endif %}
-
-  {% if page.identifier %}
-  "identifier": {
-    "@type": "PropertyValue",
-    "name": "{{ page.identifier.name }}",
-    "value": "{{ page.identifier.value }}"
-  },
-  {% endif %}
-
-  {% if page.postingId %}"postingId": "{{ page.postingId }}",{% endif %}
-  {% if page.url %}"url": "{{ page.url }}"{% endif %}
-}
-</script>
-
-{% endif %}
+  {% include job-schema.html %}
+</article>

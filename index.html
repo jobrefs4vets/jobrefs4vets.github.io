@@ -1,0 +1,30 @@
+---
+layout: default
+title: Home
+---
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Minimalist job board</p>
+    <h1>Remote-friendly opportunities for bold teams.</h1>
+    <p class="intro">Browse curated roles with clean, outline-based listing cards and strict Google JobPosting schema support.</p>
+  </div>
+</section>
+
+<section class="jobs-list">
+  {% for job in site.jobs %}
+  <article class="job-card">
+    <a href="{{ job.url | relative_url }}" class="card-link" aria-label="View {{ job.title }} details"></a>
+    <div class="card-meta">
+      <p class="small-label">{{ job.employment_type | default: "Full-time" }}</p>
+      <p class="small-label">{{ job.job_location_address_locality }}, {{ job.job_location_address_region }}</p>
+    </div>
+    <h2>{{ job.title }}</h2>
+    <p class="company">{{ job.hiring_organization_name }}</p>
+    <p class="card-description">{{ job.excerpt | strip_html | truncate: 140 }}</p>
+    <div class="card-footer">
+      <span>{{ job.base_salary_currency | default: "USD" }} {{ job.base_salary_value | default: "Competitive" }} / {{ job.base_salary_unit_text | default: "YEAR" }}</span>
+      <span class="cta">View role →</span>
+    </div>
+  </article>
+  {% endfor %}
+</section>

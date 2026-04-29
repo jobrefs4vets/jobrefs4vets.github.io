@@ -1,0 +1,53 @@
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org/",
+  "@type": "JobPosting",
+  "title": "{{ page.title | escape }}",
+  "description": "{{ page.description | escape }}",
+  "datePosted": "{{ page.date_posted }}",
+  "validThrough": "{{ page.valid_through }}",
+  "employmentType": "{{ page.employment_type }}",
+  "hiringOrganization": {
+    "@type": "Organization",
+    "name": "{{ page.hiring_organization_name | escape }}",
+    "sameAs": "{{ page.hiring_organization_website }}",
+    "logo": "{{ page.hiring_organization_logo }}"
+  },
+  "jobLocation": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{{ page.job_location_address }}",
+      "addressLocality": "{{ page.job_location_address_locality }}",
+      "addressRegion": "{{ page.job_location_address_region }}",
+      "postalCode": "{{ page.job_location_address_postal_code }}",
+      "addressCountry": "{{ page.job_location_address_country }}"
+    }
+  },
+  "baseSalary": {
+    "@type": "MonetaryAmount",
+    "currency": "{{ page.base_salary_currency }}",
+    "value": {
+      "@type": "MonetaryAmountDistribution",
+      "value": {{ page.base_salary_value | replace: ",", "" | default: 0 }},
+      "unitText": "{{ page.base_salary_unit_text }}"
+    }
+  },
+  "jobBenefits": {{ page.job_benefits | jsonify }},
+  "responsibilities": "{{ page.responsibilities | escape }}",
+  "educationRequirements": "{{ page.education_requirements | escape }}",
+  "experienceRequirements": "{{ page.experience_requirements | escape }}",
+  "applicationContact": {
+    "@type": "ContactPoint",
+    "contactType": "Human Resources",
+    "email": "{{ page.contact_email | default: site.email }}"
+  },
+  "applicantLocationRequirements": {
+    "@type": "Country",
+    "name": "{{ page.job_location_address_country }}"
+  },
+  "jobLocationType": "{{ page.job_location_type | default: "TELECOMMUTE" }}",
+  "occupationalCategory": "{{ page.occupational_category }}",
+  "industry": "{{ page.industry }}"
+}
+</script>

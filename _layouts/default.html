@@ -1,27 +1,32 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="utf-8">
-<meta name="google-site-verification" content="1RsQkmFOyWDSLYOR972re_4Yj_4ugEfxuB5GaBGjjUk" />
-  <title>{{ page.title }}</title>
-<style>
-.apply-button {
-  display: inline-block;
-  padding: 10px 18px;
-  background: #007acc;
-  color: white;
-  text-decoration: none;
-  border-radius: 4px;
-  font-weight: bold;
-}
-.apply-button:hover {
-  background: #005fa3;
-}
-</style>
-</head>
-<body>
-  <main><center>
-    {{ content }}
-  </center></main>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 | default: site.description }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-branding">
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      </div>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          {% for link in site.nav_links %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for GitHub Pages · JobPosting schema ready</p>
+    </footer>
+  </body>
 </html>
