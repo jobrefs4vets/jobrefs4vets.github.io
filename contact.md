@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Contact
+permalink: /contact/
 ---
 <section class="page-block">
   <h1>Contact</h1>
