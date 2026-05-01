@@ -10,14 +10,14 @@ hiring_organization_logo: ""
 job_location_address: ""
 job_location_address_locality: Arlington
 job_location_address_region: VA
-job_location_address_postal_code: ""
+job_location_address_postal_code: "22201"
 job_location_address_country: US
 job_location_type: ON_SITE
 occupational_category: Cybersecurity
 industry: Defense
 clearance: Top Secret
 contact_email: support@jobrefs4vets.com
-apply_url: mailto:shane@oxenith.com?subject=Interested%20in%20C5OpsNet%20Technical%20SETA%20-%20Variable%20Trust%20Endpoints&body=Hello%20Shane%2C%0A%0AI%27m%20interested%20in%20the%20C5OpsNet%20Technical%20SETA%20-%20Variable%20Trust%20Endpoints%20position%20and%20would%20like%20to%20submit%20my%20resume%20for%20consideration.%20Please%20find%20my%20resume%20attached.%0A%0AThank%20you.%0A
+apply_url: /contact/
 excerpt: "Onsite technical SETA role supporting DARPA resilience and classified endpoint initiatives in Arlington, VA."
 ---
 

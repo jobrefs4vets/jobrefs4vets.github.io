@@ -8,10 +8,10 @@ employment_type: Full-time
 hiring_organization_name: Confidential Employer
 hiring_organization_website: ""
 hiring_organization_logo: ""
-job_location_address: San Diego, California
+job_location_address: ""
 job_location_address_locality: San Diego
 job_location_address_region: CA
-job_location_address_postal_code: ""
+job_location_address_postal_code: "92101"
 job_location_address_country: US
 base_salary_currency: USD
 base_salary_value: 180000
@@ -28,7 +28,7 @@ responsibilities: |
 education_requirements: Bachelor's degree in math, engineering, physical science, operations research, data science, or a related field.
 experience_requirements: At least 15 years of professional experience in naval operations via industry, government, or military service. Excellent written and verbal communication skills. Excellent problem-solving skills. Top Secret / SCI clearance and the ability to maintain it throughout employment.
 contact_email: support@jobrefs4vets.com
-apply_url: mailto:shane@oxenith.com?subject=Interested%20in%20Military%20Operations%20Analyst&body=Hello%20Shane%2C%0A%0AI%27m%20interested%20in%20the%20Military%20Operations%20Analyst%20position%20and%20would%20like%20to%20submit%20my%20resume%20for%20consideration.%20Please%20find%20my%20resume%20attached.%0A%0AThank%20you.%0A
+apply_url: /contact/
 job_location_type: TELECOMMUTE
 occupational_category: Military Operations Analysis
 industry: Defense
