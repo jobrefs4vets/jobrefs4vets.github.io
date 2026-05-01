@@ -17,7 +17,7 @@ occupational_category: Defense Acquisition
 industry: Defense
 clearance: Top Secret / SCI
 contact_email: support@jobrefs4vets.com
-apply_url: https://careers-spa.icims.com/jobs/21640/national-security-space-launch-space-control-acquisition-analyst/job?mode=apply&apply=yes&in_iframe=1&hashed=-1834478013
+apply_url: mailto:shane@oxenith.com?subject=Interested%20in%20National%20Security%20Space%20Launch%20%2F%20Space%20Control%20Acquisition%20Analyst&body=Hello%20Shane%2C%0A%0AI%27m%20interested%20in%20the%20National%20Security%20Space%20Launch%20%2F%20Space%20Control%20Acquisition%20Analyst%20position%20and%20would%20like%20to%20submit%20my%20resume%20for%20consideration.%20Please%20find%20my%20resume%20attached.%0A%0AThank%20you.%0A
 excerpt: "Senior acquisition analyst role supporting national security space launch and space control programs at the Pentagon."
 ---
 

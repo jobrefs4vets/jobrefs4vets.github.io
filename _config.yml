@@ -1,11 +1,12 @@
 title: JobRefs4Vets
-email: support@jobrefs4vets.com
+email: shane@oxenith.com
 description: Job opportunities for veterans and military-affiliated professionals.
 baseurl: ""
 url: "https://jobrefs4vets.github.io"
 markdown: kramdown
 theme: minima
-plugins: []
+plugins:
+  - jekyll-sitemap
 # GitHub Pages-safe configuration
 collections:
   jobs:
