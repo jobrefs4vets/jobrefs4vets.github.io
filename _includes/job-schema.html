@@ -3,51 +3,53 @@
   "@context": "https://schema.org/",
   "@type": "JobPosting",
   "title": "{{ page.title | escape }}",
-  "description": "{{ page.description | escape }}",
-  "datePosted": "{{ page.date_posted }}",
-  "validThrough": "{{ page.valid_through }}",
+  "description": "{{ page.description | default: page.content | strip_html | strip_newlines | replace: '\n', ' ' | replace: '\r', ' ' | escape }}",
+  "datePosted": "{{ page.date_posted }}"{% if page.valid_through and page.valid_through != '' %},
+  "validThrough": "{{ page.valid_through }}"{% endif %},
   "employmentType": "{{ page.employment_type }}",
+  {% if page.hiring_organization_name %}
   "hiringOrganization": {
     "@type": "Organization",
-    "name": "{{ page.hiring_organization_name | escape }}",
-    "sameAs": "{{ page.hiring_organization_website }}",
-    "logo": "{{ page.hiring_organization_logo }}"
+    "name": "{{ page.hiring_organization_name | escape }}"{% if page.hiring_organization_website and page.hiring_organization_website != '' %},
+    "sameAs": "{{ page.hiring_organization_website }}"{% endif %}{% if page.hiring_organization_logo and page.hiring_organization_logo != '' %},
+    "logo": "{{ page.hiring_organization_logo }}"{% endif %}
   },
+  {% endif %}
   "jobLocation": {
     "@type": "Place",
     "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "{{ page.job_location_address }}",
-      "addressLocality": "{{ page.job_location_address_locality }}",
-      "addressRegion": "{{ page.job_location_address_region }}",
-      "postalCode": "{{ page.job_location_address_postal_code }}",
-      "addressCountry": "{{ page.job_location_address_country }}"
+      "@type": "PostalAddress"{% if page.job_location_address and page.job_location_address != 'Remote' %},
+      "streetAddress": "{{ page.job_location_address | escape }}"{% endif %}{% if page.job_location_address_locality %},
+      "addressLocality": "{{ page.job_location_address_locality | escape }}"{% endif %}{% if page.job_location_address_region %},
+      "addressRegion": "{{ page.job_location_address_region | escape }}"{% endif %}{% if page.job_location_address_postal_code and page.job_location_address_postal_code != '' %},
+      "postalCode": "{{ page.job_location_address_postal_code | escape }}"{% endif %}{% if page.job_location_address_country %},
+      "addressCountry": "{{ page.job_location_address_country | escape }}"{% endif %}
     }
-  },
+  }{% if page.base_salary_currency and page.base_salary_value %},
   "baseSalary": {
     "@type": "MonetaryAmount",
     "currency": "{{ page.base_salary_currency }}",
     "value": {
       "@type": "MonetaryAmountDistribution",
-      "value": {{ page.base_salary_value | replace: ",", "" | default: 0 }},
+      "value": {{ page.base_salary_value | replace: ",", "" }},
       "unitText": "{{ page.base_salary_unit_text }}"
     }
-  },
-  "jobBenefits": {{ page.job_benefits | jsonify }},
-  "responsibilities": "{{ page.responsibilities | escape }}",
-  "educationRequirements": "{{ page.education_requirements | escape }}",
-  "experienceRequirements": "{{ page.experience_requirements | escape }}",
+  }{% endif %}{% if page.job_benefits %},
+  "jobBenefits": {{ page.job_benefits | jsonify }}{% endif %}{% if page.responsibilities %},
+  "responsibilities": "{{ page.responsibilities | strip_html | strip_newlines | replace: '\n', ' ' | replace: '\r', ' ' | escape }}"{% endif %}{% if page.education_requirements %},
+  "educationRequirements": "{{ page.education_requirements | escape }}"{% endif %}{% if page.experience_requirements %},
+  "experienceRequirements": "{{ page.experience_requirements | escape }}"{% endif %},
   "applicationContact": {
     "@type": "ContactPoint",
     "contactType": "Human Resources",
     "email": "{{ page.contact_email | default: site.email }}"
-  },
+  }{% if page.job_location_address_country %},
   "applicantLocationRequirements": {
     "@type": "Country",
     "name": "{{ page.job_location_address_country }}"
-  },
-  "jobLocationType": "{{ page.job_location_type | default: "TELECOMMUTE" }}",
-  "occupationalCategory": "{{ page.occupational_category }}",
-  "industry": "{{ page.industry }}"
+  }{% endif %}{% if page.job_location_type %},
+  "jobLocationType": "{{ page.job_location_type | default: 'TELECOMMUTE' }}"{% endif %}{% if page.occupational_category %},
+  "occupationalCategory": "{{ page.occupational_category }}"{% endif %}{% if page.industry %},
+  "industry": "{{ page.industry }}"{% endif %}
 }
 </script>
