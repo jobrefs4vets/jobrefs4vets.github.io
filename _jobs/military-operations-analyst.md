@@ -6,9 +6,6 @@ date_posted: 2026-04-28
 valid_through: 2026-06-30
 employment_type: Full-time
 hiring_organization_name: Confidential Employer
-hiring_organization_website: ""
-hiring_organization_logo: ""
-job_location_address: ""
 job_location_address_locality: San Diego
 job_location_address_region: CA
 job_location_address_postal_code: "92101"
@@ -27,7 +24,7 @@ responsibilities: |
   Analyze the performance of DoD programs and systems. Identify capability gaps, develop requirements, and generate solutions for complex warfighting challenges. Assess the operational utility and technical feasibility of new technologies. Analyze vulnerabilities and threats to critical platforms and systems. Conduct quantitative analysis and modeling of naval forces and their missions. Apply advanced principles to analyze trends in big data to solve real-world problems. Utilize advanced simulation systems to support operations, experimentation, and acquisition analysis. Prepare and present deliverables, including written reports of findings and recommendations. Participate in customer meetings and briefings.
 education_requirements: Bachelor's degree in math, engineering, physical science, operations research, data science, or a related field.
 experience_requirements: At least 15 years of professional experience in naval operations via industry, government, or military service. Excellent written and verbal communication skills. Excellent problem-solving skills. Top Secret / SCI clearance and the ability to maintain it throughout employment.
-contact_email: support@jobrefs4vets.com
+contact_email: shane@oxenith.com
 apply_url: /contact/
 job_location_type: TELECOMMUTE
 occupational_category: Military Operations Analysis
