@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ page.title }} | {{ site.title }}</title>
+    <meta name="description" content="{{ page.excerpt | strip_html | truncate: 160 | default: site.description }}" />
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+    <script type="application/ld+json">
+    {
+      "@context" : "https://schema.org",
+      "@type" : "WebSite",
+      "name" : "{{ site.title }}",
+      "url" : "{{ site.url }}"
+    }
+    </script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-branding">
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      </div>
+      <nav aria-label="Primary navigation">
+        <ul class="nav-list">
+          {% for link in site.nav_links %}
+          <li><a href="{{ link.url | relative_url }}">{{ link.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <p>Built for GitHub Pages · JobPosting schema ready</p>
+    </footer>
+  </body>
+</html>
