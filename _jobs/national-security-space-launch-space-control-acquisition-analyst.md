@@ -5,7 +5,7 @@ description: "Lead acquisition analysis and senior-level engagement for national
 date_posted: 2026-04-30
 valid_through: 2026-06-02
 employment_type: Full-time
-hiring_organization_name: Confidential Employer
+hiring_organization_name: Defense Contractor
 hiring_organization_website: ""
 hiring_organization_logo: ""
 job_location_address: ""

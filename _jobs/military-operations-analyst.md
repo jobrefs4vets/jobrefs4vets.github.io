@@ -5,7 +5,7 @@ description: "Senior-level Military Operations and Systems Analyst focused on na
 date_posted: 2026-04-28
 valid_through: 2026-06-30
 employment_type: Full-time
-hiring_organization_name: Confidential Employer
+hiring_organization_name: Defense Contractor
 job_location_address_locality: San Diego
 job_location_address_region: CA
 job_location_address_postal_code: "92101"
@@ -26,7 +26,7 @@ education_requirements: Bachelor's degree in math, engineering, physical science
 experience_requirements: At least 15 years of professional experience in naval operations via industry, government, or military service. Excellent written and verbal communication skills. Excellent problem-solving skills. Top Secret / SCI clearance and the ability to maintain it throughout employment.
 contact_email: shane@oxenith.com
 apply_url: /contact/
-job_location_type: TELECOMMUTE
+job_location_type: ON_SITE
 occupational_category: Military Operations Analysis
 industry: Defense
 clearance: Top Secret / SCI

@@ -5,7 +5,7 @@ description: "Provide onsite support for classified network resilience and varia
 date_posted: 2026-04-30
 valid_through: 2026-06-02
 employment_type: Full-time
-hiring_organization_name: Confidential Employer
+hiring_organization_name: Defense Contractor
 hiring_organization_website: ""
 hiring_organization_logo: ""
 job_location_address: ""
@@ -32,12 +32,13 @@ apply_url: /contact/
 job_location_type: ON_SITE
 occupational_category: Cybersecurity
 industry: Defense
+clearance: Top Secret
 excerpt: "Onsite technical SETA role supporting DARPA resilience and classified endpoint initiatives in Arlington, VA."
 ---
 
 ## Role overview
 
-A confidential defense contractor is seeking a senior technical SETA to support a next-generation classified network resilience effort in Arlington, VA. This role provides expert technical direction for secure, variable-trust endpoint development and delivers timely, data-driven guidance to government stakeholders.
+A defense contractor is seeking a senior technical SETA to support a next-generation classified network resilience effort in Arlington, VA. This role provides expert technical direction for secure, variable-trust endpoint development and delivers timely, data-driven guidance to government stakeholders.
 
 ## What you will do
 
@@ -58,9 +59,10 @@ A confidential defense contractor is seeking a senior technical SETA to support 
 - Active Top Secret clearance
 - Able to work fully onsite based on client needs
 
-Desired qualifications:
+## Desired qualifications
 
 - Master’s degree
 - Experience with classified network accreditation and DoD cybersecurity activities
 - Experience supporting covert operations, cyber operations, or Special Access Programs (SAP/CAP)
 - Experience with Agile development methodologies
+ 
